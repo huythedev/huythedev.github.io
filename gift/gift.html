@@ -8,31 +8,51 @@
 
 <body>
 
-  <video id="giftVideo" autoplay>
-    <source src="/huythedev.github.io/gift/gift.mp4" type="video/mp4">
-  </video>
+  <div id="video-container">
+    <video id="giftVideo" autoplay playsinline class="video">
+      <source src="/huythedev.github.io/gift/gift.mp4" type="video/mp4">
+    </video>
+  </div>
+  <br>
+  <div class="control-bar">
+    <div class="buttons">
+      <button id="play-pause-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="play" style="display: none; " width="24"
+          height="24">
+          <path
+            d="M23.171,10.658l-21-10.5c-0.47-0.234-1.014-0.21-1.459,0.066C0.266,0.5,0,0.977,0,1.5v21c0,0.523,0.266,1,0.712,1.276   c0.242,0.15,0.514,0.226,0.787,0.226c0.229,0,0.458-0.053,0.672-0.16l21-10.5C23.683,13.086,24,12.572,24,12   S23.683,10.914,23.171,10.658z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="pause" width="24" height="24">
+          <g id="Pause">
+            <g>
+              <path
+                d="M8.5,0h-5C2.673,0,2,0.673,2,1.5v21C2,23.327,2.673,24,3.5,24h5c0.827,0,1.5-0.673,1.5-1.5v-21C10,0.673,9.327,0,8.5,0z" />
+              <path
+                d="M20.5,0h-5C14.673,0,14,0.673,14,1.5v21c0,0.827,0.673,1.5,1.5,1.5h5c0.827,0,1.5-0.673,1.5-1.5v-21    C22,0.673,21.327,0,20.5,0z" />
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+
 
   <script>
-    const video = document.querySelector("video");
+    const video = document.getElementById("giftVideo");
+    const playButton = document.getElementById("play-pause-btn");
+    playButton.addEventListener("click", togglePlay);
 
-    video.autoplay = true;
-    video.playsInline = true;
-
-    video.addEventListener('loadedmetadata', function () {
-      this.play();
-    }, false);
-
-    const playBtn = document.getElementById("play-pause-btn");
-
-    playBtn.addEventListener("click", () => {
+    function togglePlay() {
       if (video.paused) {
         video.play();
-        playBtn.innerText = "Pause";
+        document.getElementById("play").style.display = "none";
+        document.getElementById("pause").style.display = "inline";
       } else {
         video.pause();
-        playBtn.innerText = "Play";
+        document.getElementById("play").style.display = "inline";
+        document.getElementById("pause").style.display = "none";
       }
-    });
+    }
   </script>
 
 </body>
