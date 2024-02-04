@@ -1,251 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-    <link rel="shortcut icon" type="image/jpg" href="/favicon.png">
-    <meta charset="utf-8">
-    <title>Huy's Profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-    <div class="toggle-switch" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <input type="checkbox" id="darkmode-toggle">
-        <label for="darkmode-toggle"></label>
-    </div>
-    <div class="container">
-        <div class="main-body">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <img src="/avatar.png" alt="avatar" class="rounded-circle p-1 bg-primary" width="110">
-                                <div class="mt-3">
-                                    <h4>Huy Nguyen</h4>
-                                    <p class="text-secondary mb-1">Student</p>
-                                    <p class="text-muted font-size-sm">Quang Nam, Vietnam</p>
-                                    <button class="btn btn-primary" hidden>Follow</button>
-                                    <a href="mailto:contact@huythedev.me" class="btn btn-outline-primary">Contact via
-                                        email</a>
-                                </div>
-                            </div>
-                            <hr class="my-4">
-                            <ul class="list-group list-group-flush">
+    <title>Huy Nguyen</title>
 
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://huythedev.me" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-globe me-2 icon-inline">
-                                                <circle cx="12" cy="12" r="10"></circle>
-                                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                                <path
-                                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                                </path>
-                                            </svg>
-                                            Website
-                                        </a>
-                                    </div>
-                                </li>
+    <link
+      rel="icon"
+      href="./profile_files/external-software-developer-professions-men-diversity-flaticons-lineal-color-flat-icons-2.png"
+      type="image/png"
+    />
 
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://github.com/huythedev" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-github me-2 icon-inline">
-                                                <path
-                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                </path>
-                                            </svg>
-                                            GitHub
-                                        </a>
-                                    </div>
-                                </li>
+    <link href="./profile_files/css" rel="stylesheet" />
+    <link href="./profile_files/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./profile_files/reset.css" />
+    <link rel="stylesheet" href="./profile_files/styles.css" />
 
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://twitter.com/huythedev" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-twitter me-2 icon-inline text-info">
-                                                <path
-                                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                                </path>
-                                            </svg>
-                                            Twitter
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://www.reddit.com/user/huythedev" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 256 256" width="256">
-                                                <circle cx="128" cy="128" fill="#ff4500" r="128" />
-                                                <path
-                                                    d="m213.149867 129.220267c0-10.376534-8.391111-18.616889-18.616889-18.616889-5.034667 0-9.614222 1.982578-12.970667 5.188266-12.817067-9.156266-30.367289-15.106844-49.900089-15.8691551l8.544711-39.9815111 27.773156 5.9505778c.3072 7.0200888 6.104178 12.6663111 13.277867 12.6663111 7.324444 0 13.275022-5.9505778 13.275022-13.2778667 0-7.3244444-5.950578-13.2750222-13.275022-13.2750222-5.188267 0-9.767823 3.0520889-11.904 7.4780444l-30.976-6.5621333c-.915912-.1536-1.831823 0-2.443378.4579555-.762311.4579556-1.220267 1.2202667-1.371022 2.1361778l-9.463467 44.5582218c-19.837156.611556-37.6917334 6.562134-50.6624001 15.872-3.3564445-3.205688-7.936-5.188266-12.9706667-5.188266-10.3765333 0-18.6168889 8.391111-18.6168889 18.616889 0 7.6288 4.5767111 14.037333 10.9880889 16.938666-.3072 1.828978-.4579555 3.6608-.4579555 5.646223 0 28.686222 33.4193777 52.036266 74.6211553 52.036266 41.201778 0 74.621156-23.196444 74.621156-52.036266 0-1.831823-.1536-3.817245-.457956-5.646223 6.408534-2.901333 10.985245-9.463466 10.985245-17.092266zm-127.8776892 13.275022c0-7.324445 5.9505778-13.275022 13.2778666-13.275022 7.3244446 0 13.2750226 5.950577 13.2750226 13.275022 0 7.324444-5.950578 13.277867-13.2750226 13.277867-7.3272888.150755-13.2778666-5.953423-13.2778666-13.277867zm74.3168002 35.2512c-9.156267 9.156267-26.552889 9.767822-31.587556 9.767822-5.188266 0-22.584889-.765155-31.5903998-9.767822-1.3710222-1.373867-1.3710222-3.510045 0-4.883911 1.3738667-1.371022 3.5100445-1.371022 4.8839108 0 5.799823 5.799822 18.008178 7.7824 26.706489 7.7824s21.057422-1.982578 26.703645-7.7824c1.373866-1.371022 3.510044-1.371022 4.883911 0 1.220266 1.373866 1.220266 3.510044 0 4.883911zm-2.443378-21.822578c-7.324444 0-13.275022-5.950578-13.275022-13.275022 0-7.324445 5.950578-13.275022 13.275022-13.275022 7.327289 0 13.277867 5.950577 13.277867 13.275022 0 7.170844-5.950578 13.275022-13.277867 13.275022z"
-                                                    fill="#fff" />
-                                            </svg>
-                                            Reddit
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://www.instagram.com/huythedev" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-instagram me-2 icon-inline text-danger">
-                                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                            </svg>
-                                            Instagram
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li class="list-group-item">
-                                    <div class="text-center">
-                                        <a href="https://www.facebook.com/huythedev" class="btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-facebook me-2 icon-inline text-primary">
-                                                <path
-                                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
-                                                </path>
-                                            </svg>
-                                            Facebook
-                                        </a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control" value="Nguyen Quoc Huy" readonly>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control" value="huythedev@gmail.com" readonly>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control" value="Quang Nam, Vietnam" readonly>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="d-flex align-items-center mb-3">Skills</h5>
-                                    <p>:))</p>
-                                    <div class="progress mb-3" style="height: 5px">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p>:))</p>
-                                    <div class="progress mb-3" style="height: 5px">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 72%"
-                                            aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p>:))</p>
-                                    <div class="progress mb-3" style="height: 5px">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 89%"
-                                            aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p>:))</p>
-                                    <div class="progress mb-3" style="height: 5px">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"
-                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p>:))</p>
-                                    <div class="progress" style="height: 5px">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 66%"
-                                            aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="Github Projects">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="d-flex align-items-center mb-3">My Github projects</h5>
-                        <div class="mt-3">
-                            <a href="https://huythedev.me/countdays/" class="btn btn-outline-primary">Countdays</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="/gift/gift.html" style="position: fixed; bottom: 20px; right: 20px;">
-            <button style="border: none; background-color: transparent;">
-                <img src="/giftbox.png" width="48" height="48">
-            </button>
-        </a>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const toggleSwitch = document.querySelector("#darkmode-toggle");
-        const moonIcon = document.querySelector(".moon");
-        const sunIcon = document.querySelector(".sun");
-
-        toggleSwitch.addEventListener("change", () => {
-            document.body.classList.toggle("dark-mode");
-
-            if (document.body.classList.contains("dark-mode")) {
-                sunIcon.style.opacity = "0";
-                moonIcon.style.opacity = "1";
-            } else {
-                sunIcon.style.opacity = "1";
-                moonIcon.style.opacity = "0";
-            }
-        });
-    </script>
-</body>
-
+    <link rel="stylesheet" href="./profile_files/grey-white.css" />
+    <script
+      charset="utf-8"
+      src="chrome-extension://oakbcaafbicdddpdlhbchhpblmhefngh/dist/ruffle.js?id=27776940095"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="intro">
+        Hello, I'm huythedev
+        <img
+          src="./profile_files/external-software-developer-professions-men-diversity-flaticons-lineal-color-flat-icons-2.png"
+        />
+      </div>
+      <div class="tagline">
+        A secondary school student from Quang Nam, Viet Nam 🇻🇳
+      </div>
+      <div class="icons-social" style="margin-left: 10px">
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://github.com/huythedev"
+        >
+          <img src="./profile_files/github--v1.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://stackoverflow.com/users/22808771/huythedev?tab=profile"
+        >
+          <img
+            src="./profile_files/external-stack-overflow-is-a-question-and-answer-site-for-professional-logo-color-tal-revivo.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://instagram.com/huythedev"
+        >
+          <img src="./profile_files/instagram-new--v2.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://twitter.com/huythedev"
+        >
+          <img src="./profile_files/twitter-squared--v2.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://facebook.com/huythedev"
+        >
+          <img src="./profile_files/facebook.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="mailto:huythedev@gmail.com"
+        >
+          <img src="./profile_files/email.png"
+        /></a>
+        <a
+          style="margin-left: 10px"
+          target="_blank"
+          href="https://reddit.com/user/huythedev"
+        >
+          <img src="./profile_files/reddit.png"
+        /></a>
+      </div>
+    </main>
+  </body>
 </html>
