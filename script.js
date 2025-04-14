@@ -1,4 +1,4 @@
-const userID = "492259431103332353"; //put your discord user id here. // 738748102311280681
+const userID = "929735117117730828"; 
 const statusImage = document.getElementById("status-image");
 // const avatarImage = document.getElementById("avatar-image");
 
